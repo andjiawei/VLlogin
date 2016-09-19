@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VLLogin</string>
+    <string name="login_desc_text">登录即代表您同意</string>
+    <string name="login_desc_text_line"><u>VLiveShow服务和隐私条款</u></string>
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="user"
+            type="com.netsite.vllogin.domain.ViewModel.User" />
+        <variable
+            name="present"
+            type="com.netsite.vllogin.login.main.MainLoginPresent" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa000000">
+
+        <ImageView
+            android:id="@+id/login_iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/login_launch_icon" />
+
+        <TextView
+            android:id="@+id/login_tv_login"
+            style="@style/LoginButton"
+            android:layout_below="@id/login_iv_icon"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/shape_button_login"
+            android:onClick="@{present::phoneLogin}"
+            android:text="手机号登录" />
+
+        <TextView
+            android:id="@+id/login_tv_sign_up"
+            style="@style/LoginButton"
+            android:layout_below="@id/login_tv_login"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_button_sign_up"
+            android:onClick="@{present::signUp}"
+            android:text="注册" />
+
+        <LinearLayout
+            android:id="@+id/login_ll__mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_tv_sign_up"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_short_white_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择登录方式"
+                android:textColor="@color/login_button_text" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_short_white_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_ll_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_ll__mode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="@{present::weChatLogin}"
+                android:background="@drawable/login_ic_wechat" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:onClick="@{present::weiboLogin}"
+                android:background="@drawable/login_ic_weibo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:onClick="@{present::weiboLogin}"
+                android:background="@drawable/login_ic_qq" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_ll_desc_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_ll_share"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/login_tv_desc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_desc_text"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_desc_text_line"
+                android:onClick="@{present::article}"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
