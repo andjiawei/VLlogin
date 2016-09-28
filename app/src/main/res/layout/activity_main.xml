@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="user"
@@ -8,12 +8,17 @@
         <variable
             name="present"
             type="com.netsite.vllogin.login.main.MainLoginPresent" />
+        <variable
+            name="toolbar"
+            type="com.netsite.vllogin.domain.ViewModel.ToolbarModel" />
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#aa000000">
+
+        <include layout="@layout/widget_toolbar" bind:toolbar="@{toolbar}"></include>
 
         <ImageView
             android:id="@+id/login_iv_icon"

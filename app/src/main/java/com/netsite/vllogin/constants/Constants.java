@@ -6,4 +6,7 @@ package com.netsite.vllogin.constants;
 public class Constants {
 
 
+    public enum ToolbarState{
+        NONE, PHONE_LOGIN,SIGN_UP,VERIFICATION
+    }
 }

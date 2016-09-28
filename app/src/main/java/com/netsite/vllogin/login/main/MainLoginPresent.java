@@ -3,6 +3,9 @@ package com.netsite.vllogin.login.main;
 import android.util.Log;
 import android.view.View;
 
+import com.netsite.vllogin.login.phonelogin.PhoneLoginActivity;
+import com.netsite.vllogin.login.signup.SignUpActivity;
+
 /**
  * Created by QYer on 2016/9/19.
  */
@@ -12,11 +15,15 @@ public class MainLoginPresent {
     public MainLoginPresent(MainActivity activity){
         mainActivity =activity;
     }
+
+    /**
+     * 手机号登录按钮的点击事件
+     */
     public void phoneLogin(View view) {
-        Log.e("MainLoginPresent", "phoneLogin: ");
+        mainActivity.startActivity(PhoneLoginActivity.class);
     }
     public void signUp(View view) {
-        Log.e("MainLoginPresent", "signUp: ");
+        mainActivity.startActivity(SignUpActivity.class);
     }
     public void qqLogin(View view) {
         Log.e("MainLoginPresent", "qqLogin: ");

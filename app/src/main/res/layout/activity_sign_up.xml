@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="toolbar"
+            type="com.netsite.vllogin.domain.ViewModel.ToolbarModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.netsite.vllogin.login.signup.SignUpActivity">
+        <include layout="@layout/widget_toolbar" bind:toolbar="@{toolbar}"></include>
+    </RelativeLayout>
+</layout>

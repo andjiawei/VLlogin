@@ -2,4 +2,16 @@
     <string name="app_name">VLLogin</string>
     <string name="login_desc_text">登录即代表您同意</string>
     <string name="login_desc_text_line"><u>VLiveShow服务和隐私条款</u></string>
+    <string name="login_phone_sign_up">手机号注册</string>
+    <string name="login_phone_login">手机号登录</string>
+    <string name="login_verification_login">验证码登录</string>
+    <string name="login_login">登录</string>
+    <string name="login_sign_up">注册</string>
+    <string name="login_country">国家/地区</string>
+    <string name="login_china">中国</string>
+    <string name="number86">+86</string>
+    <string name="login_hint_input_phone">请输入您的手机号码</string>
+    <string name="login_password">密码</string>
+    <string name="login_please_password">请输入密码</string>
+
 </resources>

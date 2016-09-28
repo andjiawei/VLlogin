@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="toolbar"
+            type="com.netsite.vllogin.domain.ViewModel.ToolbarModel" />
+    </data>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/toolbar"
+        style="@style/ToolBarStyle"
+        android:background="@{toolbar.backgroundColor}"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:onClick="@{toolbar.back}"
+            android:src="@drawable/toolbar_home_back"
+            android:visibility="@{toolbar.showBackIcon?View.VISIBLE:View.GONE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{toolbar.descText}"
+            android:textColor="@color/white"
+            android:visibility="@{toolbar.showText?View.VISIBLE:View.GONE}" />
+
+        <!--增加一个按钮 登录和注册-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|right"
+            android:layout_marginRight="10dp"
+            android:text="@{toolbar.buttonText}"
+            android:onClick="@{(view) -> toolbar.loginSignUp(context)}"
+            android:textColor="@color/white"
+            android:visibility="@{toolbar.showButton?View.VISIBLE:View.GONE}" />
+
+    </android.support.v7.widget.Toolbar>
+</layout>

@@ -11,5 +11,7 @@
     <color name="login_button_bg_end">#E41C1C</color>
     <color name="transparent">#00000000</color>
     <color name="white_alpha">#99ffffff</color>
+    <color name="line_gray">#EFEFEF</color>
+    <color name="text_hint">#939393</color>
 
 </resources>
