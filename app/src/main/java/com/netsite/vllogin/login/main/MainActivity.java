@@ -1,6 +1,5 @@
 package com.netsite.vllogin.login.main;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.netsite.vllogin.R;
@@ -20,9 +19,5 @@ public class MainActivity extends BaseActivity {
         bingding.setToolbar(toolbarModel);
         setStatusColor(getResources().getColor(R.color.transparent));//设置状态栏颜色
         setToolBar(Constants.ToolbarState.NONE);//隐藏toolbar
-    }
-
-    public void startActivity(Class< ? extends BaseActivity> clazz){
-        startActivity(new Intent(this,clazz));
     }
 }

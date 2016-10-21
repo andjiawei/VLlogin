@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="验证码" />
+
+    <EditText
+        android:id="@+id/et_input_verify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="请输入验证码"
+        android:textSize="16sp"
+        android:inputType="phone"
+        android:textColor="@color/text_hint"
+        android:textColorHint="@color/text_hint"
+        android:maxLength="4" />
+
+    <LinearLayout
+        android:id="@+id/ll_send_verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone_gray" />
+
+        <TextView
+            android:id="@+id/tv_send_verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="发送验证码" />
+    </LinearLayout>
+</merge>

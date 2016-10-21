@@ -1,5 +1,6 @@
 package com.netsite.vllogin.base;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.graphics.drawable.Drawable;
@@ -58,6 +59,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         toolbarModel.setDescText(descText);
         toolbarModel.setShowButton(isShowButton);
         toolbarModel.setButtonText(buttonText);
+    }
+
+    public void startActivity(Class< ? extends BaseActivity> clazz){
+        startActivity(new Intent(this,clazz));
     }
 
     /**

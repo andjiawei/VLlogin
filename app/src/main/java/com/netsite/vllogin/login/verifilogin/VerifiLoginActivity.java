@@ -1,21 +1,21 @@
-package com.netsite.vllogin.login.phonelogin;
+package com.netsite.vllogin.login.verifilogin;
 
 import android.os.Bundle;
 
 import com.netsite.vllogin.R;
 import com.netsite.vllogin.base.BaseActivity;
 import com.netsite.vllogin.constants.Constants;
-import com.netsite.vllogin.databinding.ActivityPhoneLoginBinding;
+import com.netsite.vllogin.databinding.ActivityVerifiLoginBinding;
 
-public class PhoneLoginActivity extends BaseActivity {
+public class VerifiLoginActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityPhoneLoginBinding binding = getBingContentView(R.layout.activity_phone_login);
-        binding.setPresent(new PhoneLoginPresent(this));
+        ActivityVerifiLoginBinding binding = getBingContentView(R.layout.activity_verifi_login);
+        binding.setPresent(new VerifiLoginPresent(this));
         binding.setToolbar(toolbarModel);
         setStatusColor(getResources().getColor(R.color.login_button_bg_end));//设置状态栏颜色
-        setToolBar(Constants.ToolbarState.PHONE_LOGIN);
+        setToolBar(Constants.ToolbarState.VERIFICATION);
     }
 }

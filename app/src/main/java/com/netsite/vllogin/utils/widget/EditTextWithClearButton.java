@@ -10,7 +10,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.netsite.vllogin.R;
 
@@ -101,7 +100,9 @@ public class EditTextWithClearButton extends EditText implements View.OnFocusCha
         if (text.length() == 13 && isAdd()) {
             showDialog(isShow);
             hideSoft();
-            Toast.makeText(getContext(), "qqqqq", Toast.LENGTH_SHORT).show();
+            if(listener!=null){
+                listener.onPhoneInputComplete();
+            }
         }
         currentIndex = getText().length();
     }
@@ -165,4 +166,15 @@ public class EditTextWithClearButton extends EditText implements View.OnFocusCha
     public void afterTextChanged(Editable s) {
 
     }
+
+    private OnPhoneInputCompleteListener listener;
+
+    public void setOnPhoneInputCompleteListener(OnPhoneInputCompleteListener listener){
+        this.listener=listener;
+    }
+
+    public interface OnPhoneInputCompleteListener{
+        void onPhoneInputComplete();
+    }
+
 }

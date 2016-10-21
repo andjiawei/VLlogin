@@ -12,17 +12,19 @@
         <activity android:name=".login.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--手机号登录-->
-        <activity android:name=".login.phonelogin.PhoneLoginActivity"
-            android:launchMode="singleTask"
-            />
-        <!--手机号注册-->
-        <activity android:name=".login.signup.SignUpActivity"
-            android:launchMode="singleTask"
-            ></activity>
+        <!-- 手机号登录 -->
+        <activity
+            android:name=".login.phonelogin.PhoneLoginActivity"
+            android:launchMode="singleTask" />
+        <!-- 手机号注册 -->
+        <activity
+            android:name=".login.signup.SignUpActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".login.verifilogin.VerifiLoginActivity"></activity>
     </application>
 
 </manifest>

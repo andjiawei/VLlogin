@@ -3,6 +3,7 @@ package com.netsite.vllogin.login.main;
 import android.util.Log;
 import android.view.View;
 
+import com.netsite.vllogin.base.BaseActivity;
 import com.netsite.vllogin.login.phonelogin.PhoneLoginActivity;
 import com.netsite.vllogin.login.signup.SignUpActivity;
 
@@ -11,19 +12,19 @@ import com.netsite.vllogin.login.signup.SignUpActivity;
  */
 public class MainLoginPresent {
 
-    private final MainActivity mainActivity;
-    public MainLoginPresent(MainActivity activity){
-        mainActivity =activity;
+    private  BaseActivity activity;
+    public MainLoginPresent(BaseActivity activity){
+        this.activity =activity;
     }
 
     /**
      * 手机号登录按钮的点击事件
      */
     public void phoneLogin(View view) {
-        mainActivity.startActivity(PhoneLoginActivity.class);
+        activity.startActivity(PhoneLoginActivity.class);
     }
     public void signUp(View view) {
-        mainActivity.startActivity(SignUpActivity.class);
+        activity.startActivity(SignUpActivity.class);
     }
     public void qqLogin(View view) {
         Log.e("MainLoginPresent", "qqLogin: ");
